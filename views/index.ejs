@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1 class='title'>
+    <%= title.toUpperCase() %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+  <main>
+    <section>
+      <% messages.forEach((message)=> { %>
+        <div class="message">
+          <div class="message-header">
+            <h3 class="message-title">
+              <%= message.user %>
+            </h3>
+            <small>
+              <%= dayjs(message.added).fromNow() %>
+            </small>
+          </div>
+          <p>
+            <%= message.text %>
+          </p>
+        </div>
+        <% }) %>
+    </section>
+  </main>
+</body>
+
 </html>

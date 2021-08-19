@@ -1,8 +1,33 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  background: #2b2d42;
+  color: #edf2f4;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.title {
+  color: #ef233c;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 0.3rem 1rem;
+  background: #edf2f4;
+  color: #2b2d42;
+  border-radius: 0.5rem;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.message-title {
+  color: #1a2328;
+  margin: 0 0.5rem 0 0;
 }
